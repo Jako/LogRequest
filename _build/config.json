@@ -1,0 +1,60 @@
+{
+  "name": "LogRequest",
+  "lowCaseName": "logrequest",
+  "description": "Log request parameters and display them in a Dashboard Widget",
+  "author": "Thomas Jakobi",
+  "version": "1.0.0",
+  "package": {
+    "elements": {
+      "widgets": [
+        {
+          "name": "logrequest.widget.rank",
+          "description": "logrequest.widget.rank_desc",
+          "content": "logrequest_rank.widget.php",
+          "type": "file",
+          "size": "half"
+        },
+        {
+          "name": "logrequest.widget.log",
+          "description": "logrequest.widget.log_desc",
+          "content": "logrequest_log.widget.php",
+          "type": "file",
+          "size": "half"
+        }
+      ],
+      "plugins": [
+        {
+          "name": "LogRequest",
+          "file": "logrequest.plugin.php",
+          "description": "Log request parameter",
+          "events": [
+            "OnWebPageInit"
+          ]
+        }
+      ]
+    },
+    "systemSettings": [
+      {
+        "key": "debug",
+        "type": "combo-boolean",
+        "area": "system",
+        "value": ""
+      },
+      {
+        "key": "trigger",
+        "area": "site",
+        "value": ""
+      }
+    ]
+  },
+  "database": {
+    "tables": [
+      "LogRequestLog"
+    ]
+  },
+  "build": {
+    "readme": "docs/readme.txt",
+    "license": "docs/license.txt",
+    "changelog": "docs/changelog.txt"
+  }
+}
