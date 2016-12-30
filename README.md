@@ -1,6 +1,6 @@
 # LogRequest
 
-LogRequest is an extra for MODX to log request parameter values and display them in a dashboard widget.
+LogRequest is an extra for MODX to log request parameter values and display them in Dashboard Widgets.
 
 ## Usage
 
@@ -12,7 +12,7 @@ LogRequest uses the following system settings in the namespace `logrequest`:
 
 Key | Description | Default
 ----|-------------|--------
-logrequest.trigger | Request key that triggers the request logging. | 
+logrequest.trigger | Request key that triggers the request logging. |
 
 ## Widgets
 
