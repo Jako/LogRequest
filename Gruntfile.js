@@ -2,7 +2,6 @@ module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
         modx: grunt.file.readJSON('_build/config.json'),
-        sshconfig: grunt.file.readJSON('/Users/jako/Documents/MODx/partout.json'),
         banner: '/*!\n' +
         ' * <%= modx.name %> - <%= modx.description %>\n' +
         ' * Version: <%= modx.version %>\n' +
