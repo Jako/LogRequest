@@ -1,6 +1,6 @@
 <?php
 /**
- * Default Lexicon Entries for LogRequest
+ * Setting Lexicon Entries for LogRequest
  *
  * @package logrequest
  * @subpackage lexicon

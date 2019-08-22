@@ -38,7 +38,7 @@
         "key": "debug",
         "type": "combo-boolean",
         "area": "system",
-        "value": ""
+        "value": "0"
       },
       {
         "key": "trigger",

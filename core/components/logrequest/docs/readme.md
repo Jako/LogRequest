@@ -25,16 +25,16 @@ in the dashboard to view the logged key values.
 
 LogRequest uses the following system settings in the namespace `logrequest`:
 
-Key                | Description                                    | Default
--------------------|------------------------------------------------|--------
-logrequest.trigger | Request key that triggers the request logging. |
+Key | Description | Default
+----|-------------|--------
+logrequest.trigger | Request key that triggers the request logging. | -
 
 ## Widgets
 
 LogRequest contains two dashboard widgets to display the logged data:
 
-Widget          | Description
-----------------|-----------------------------------------
+Widget | Description
+-------|------------
 LogRequest Rank | This widget displays the request ranks
 LogRequest Log  | This widget displays the logged requests
 
