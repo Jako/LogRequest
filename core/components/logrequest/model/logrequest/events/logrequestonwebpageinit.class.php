@@ -1,9 +1,9 @@
 <?php
-
 /**
  * @package logrequest
  * @subpackage plugin
  */
+
 class LogRequestOnWebPageInit extends LogRequestPlugin
 {
     public function run()

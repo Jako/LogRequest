@@ -36,3 +36,20 @@
   line-height: 20px;
   height: 20px;
 }
+
+.dashboard-block-treehillstudio {
+  position: relative;
+}
+
+.treehillstudio-widget-about {
+  position: absolute;
+  cursor: pointer;
+  right: 15px;
+  top: 12px;
+  opacity: 0.25;
+  transition: opacity 0.5s;
+}
+
+.treehillstudio-widget-about:hover {
+  opacity: 1;
+}

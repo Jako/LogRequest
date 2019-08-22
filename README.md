@@ -1,6 +1,8 @@
 # LogRequest
 
-LogRequest is an extra for MODX to log request parameter values and display them in Dashboard Widgets.
+LogRequest is an extra for MODX to log request parameter values and display them
+in dashboard widgets. It could be used i.e. to display the searched strings of a
+SimpleSearch form in the dashboard.
 
 ## Installation
 
@@ -8,7 +10,9 @@ MODX Package Management
 
 ## Usage
 
-Fill the MODX system setting `logrequest.trigger` with a request parameter key (or a komma separated list of keys) that should be logged. Install the widget(s) in the dashboard to view the logged key values.
+Fill the MODX system setting `logrequest.trigger` with a request parameter key
+(or a komma separated list of keys) that should be logged. Install the widget(s)
+in the dashboard to view the logged key values.
 
 ## System Settings
 

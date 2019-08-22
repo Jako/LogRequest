@@ -3,7 +3,7 @@
  * LogRequest Plugin
  *
  * @package logrequest
- * @subpackage pluginfile
+ * @subpackage plugin
  *
  * @var modX $modx
  * @var array $scriptProperties

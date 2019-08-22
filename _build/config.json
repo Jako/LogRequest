@@ -1,9 +1,9 @@
 {
   "name": "LogRequest",
   "lowCaseName": "logrequest",
-  "description": "Log request parameters and display them in a Dashboard Widget",
+  "description": "Log request parameter values and display them in the Dashboard",
   "author": "Thomas Jakobi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "package": {
     "elements": {
       "widgets": [
@@ -52,9 +52,27 @@
       "LogRequestLog"
     ]
   },
+  "dependencies": [
+    {
+      "name": "php",
+      "version": ">=5.6"
+    },
+    {
+      "name": "modx",
+      "version": ">=2.6"
+    }
+  ],
   "build": {
     "readme": "docs/readme.md",
     "license": "docs/license.md",
-    "changelog": "docs/changelog.md"
+    "changelog": "docs/changelog.md",
+    "setupOptions": {
+      "source": "setup.options.php"
+    },
+    "resolver": {
+      "after": [
+        "resolve.treehillstudio.php"
+      ]
+    }
   }
 }

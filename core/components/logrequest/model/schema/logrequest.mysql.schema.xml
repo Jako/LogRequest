@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model package="logrequest" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="logrequest" phpdoc-subpackage="model" version="1.1">
+<model package="logrequest" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB">
     <object class="LogRequestLog" table="logrequest_log" extends="xPDOSimpleObject">
         <field key="trigger" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
         <field key="value" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
         <field key="request" dbtype="text" phptype="string" null="true"/>
-        <field key="loggedon" dbtype="int" precision="10" phptype="integer" null="true"/>
+        <field key="loggedon" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="false" default="0"/>
     </object>
 </model>
