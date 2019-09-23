@@ -8,7 +8,6 @@
 
 abstract class modDashboardWidgetLogrequest extends modDashboardWidgetInterface
 {
-
     /**
      * @var LogRequest
      */
