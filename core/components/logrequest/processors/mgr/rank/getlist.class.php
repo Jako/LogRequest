@@ -22,6 +22,13 @@ class LogrequestRankGetProcessor extends modObjectGetListProcessor
 
         return $c;
     }
+
+    public function prepareRow(xPDOObject $object)
+    {
+        $ta = $object->toArray('', false, false);
+        $ta['value'] = htmlspecialchars($ta['value']);
+        return $ta;
+    }
 }
 
 return 'LogrequestRankGetProcessor';

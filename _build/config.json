@@ -3,7 +3,7 @@
   "lowCaseName": "logrequest",
   "description": "Log request parameter values and display them in the Dashboard",
   "author": "Thomas Jakobi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "package": {
     "elements": {
       "widgets": [

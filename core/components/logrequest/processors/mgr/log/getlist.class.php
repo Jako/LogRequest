@@ -18,9 +18,9 @@ class LogrequestLogGetProcessor extends modObjectGetListProcessor
     {
         $ta = $object->toArray('', false, false);
         $ta['loggedon'] = !empty($ta['loggedon']) ? strftime('%Y-%m-%d %H:%M:%S', $ta['loggedon']) : '';
+        $ta['value'] = htmlspecialchars($ta['value']);
         return $ta;
     }
-
 }
 
 return 'LogrequestLogGetProcessor';
