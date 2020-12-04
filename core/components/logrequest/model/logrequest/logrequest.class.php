@@ -3,7 +3,7 @@
 /**
  * LogRequest Classfile
  *
- * Copyright 2016-2019 by Thomas Jakobi <thomas.jakobi@partout.info>
+ * Copyright 2016-2020 by Thomas Jakobi <thomas.jakobi@partout.info>
  *
  * @package logrequest
  * @subpackage classfile
@@ -30,7 +30,7 @@ class LogRequest
      * The version
      * @var string $version
      */
-    public $version = '1.0.1';
+    public $version = '1.0.2';
 
     /**
      * The class config
