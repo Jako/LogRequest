@@ -6,7 +6,7 @@
  * @package logrequest
  * @subpackage processors
  */
-class LogrequestRankGetProcessor extends modObjectGetListProcessor
+class LogrequestRankGetProcessor extends modProcessor
 {
     public $classKey = 'LogRequestLog';
     public $languageTopics = array('logrequest:default');
@@ -14,13 +14,33 @@ class LogrequestRankGetProcessor extends modObjectGetListProcessor
     public $defaultSortDirection = 'DESC';
     public $objectType = 'logrequest.log';
 
-    public function prepareQueryBeforeCount(xPDOQuery $c)
+    public function process()
     {
-        $c->select($this->modx->getSelectColumns($this->classKey, $this->classKey));
+        $c = $this->modx->newQuery($this->classKey);
+        $c->select($this->modx->getSelectColumns($this->classKey, $this->classKey, '', ['value']));
         $c->select('COUNT(*) AS count');
         $c->groupby($this->classKey . '.value');
+        $c->sortby($this->getProperty('sort', $this->defaultSortField), $this->getProperty('sort_dir', $this->defaultSortDirection));
 
-        return $c;
+        if ($c->prepare()) {
+            $cq = new xPDOCriteria($this->modx, "SELECT COUNT(*) FROM ({$c->toSQL(false)}) cq", $c->bindings, $c->cacheFlag);
+            $total = ($cq->stmt && $cq->stmt->execute()) ? intval($cq->stmt->fetchColumn()) : 0;
+
+            $c->limit($this->getProperty('limit', 10), $this->getProperty('offset', 0));
+            if ($c->prepare()) {
+                $list = [];
+                if ($c->stmt->execute()) {
+                    while ($data = $c->stmt->fetch(PDO::FETCH_OBJ)) {
+                        $list[] = [
+                            'value' => $data->value,
+                            'count' => $data->count
+                        ];
+                    }
+                }
+                return $this->outputArray($list, $total);
+            }
+        }
+        return $this->failure('Could not retrieve data');
     }
 
     public function prepareRow(xPDOObject $object)
