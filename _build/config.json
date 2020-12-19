@@ -71,6 +71,7 @@
     },
     "resolver": {
       "after": [
+        "resolve.synctables.php",
         "resolve.treehillstudio.php"
       ]
     }

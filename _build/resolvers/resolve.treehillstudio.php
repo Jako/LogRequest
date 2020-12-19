@@ -5,7 +5,7 @@
  * @package logrequest
  * @subpackage build
  *
- * @var mixed $object
+ * @var xPDOObject $object
  * @var array $options
  * @var xPDOTransport $transport
  */
