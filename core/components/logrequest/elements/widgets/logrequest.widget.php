@@ -45,7 +45,7 @@ abstract class modDashboardWidgetLogrequest extends modDashboardWidgetInterface
         parent::__construct($modx, $widget, $controller);
 
         $corePath = $this->modx->getOption('logrequest.core_path', null, $this->modx->getOption('core_path') . 'components/logrequest/');
-        $this->logrequest = $this->modx->getService('logrequest', 'LogRequest', $corePath . '/model/logrequest/', array(
+        $this->logrequest = $this->modx->getService('logrequest', 'LogRequest', $corePath . 'model/logrequest/', array(
             'core_path' => $corePath
         ));
 
