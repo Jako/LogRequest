@@ -73,7 +73,7 @@ abstract class modDashboardWidgetLogrequest extends modDashboardWidgetInterface
         }
         $this->modx->controller->addHtml('<script type="text/javascript">'
             . 'var LogRequest = {'
-            . 'config : ' . json_encode($this->logrequest->config, JSON_PRETTY_PRINT)
+            . 'config : ' . json_encode($this->logrequest->config, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)
             . '};'
             . '</script>');
         $this->controller->addHtml('<script type="text/javascript">Ext.onReady(function() {
