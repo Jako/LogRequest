@@ -53,3 +53,12 @@
 .treehillstudio-widget-about:hover {
   opacity: 1;
 }
+
+.treehillstudio_window a {
+  color: #b2bf28;
+  text-decoration: none;
+}
+
+.treehillstudio_window a:hover {
+  color: #77801a;
+}

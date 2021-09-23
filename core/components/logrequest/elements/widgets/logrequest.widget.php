@@ -26,7 +26,7 @@ abstract class modDashboardWidgetLogrequest extends modDashboardWidgetInterface
             $widgetArray = $this->widget->toArray();
             $widgetArray['content'] = $output;
             $widgetArray['class'] = $this->cssBlockClass;
-            $widgetArray['name_trans'] .= '<span class="treehillstudio-widget-about"><img width="83" height="25" src="' . $this->logrequest->getOption('assetsUrl') . 'img/mgr/treehill-studio-mini.png" srcset="' . $this->logrequest->getOption('assetsUrl') . 'img/mgr/treehill-studio-mini@2x.png 2x" alt="Treehill Studio"></span>';
+            $widgetArray['name_trans'] .= '<span class="treehillstudio-widget-about"><img width="91" height="25" src="' . $this->logrequest->getOption('assetsUrl') . 'img/mgr/treehill-studio-mini.png" srcset="' . $this->logrequest->getOption('assetsUrl') . 'img/mgr/treehill-studio-mini@2x.png 2x" alt="Treehill Studio"></span>';
             $output = $this->getFileChunk('dashboard/block.tpl', $widgetArray);
             $output = preg_replace('@\[\[(.[^\[\[]*?)\]\]@si', '', $output);
             $output = preg_replace('@\[\[(.[^\[\[]*?)\]\]@si', '', $output);

@@ -22,5 +22,8 @@
     "maintained node versions",
     "not dead",
     "ie >= 8"
-  ]
+  ],
+  "dependencies": {
+    "grunt-contrib-imagemin": "^4.0.0"
+  }
 }

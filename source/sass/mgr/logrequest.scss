@@ -1,3 +1,5 @@
+$treehillstudio-color: #cbd842;
+
 .modx-grid-small {
   .x-panel-tbar {
     .x-toolbar {
@@ -65,5 +67,15 @@
   transition: opacity 0.5s;
   &:hover {
     opacity: 1;
+  }
+}
+
+.treehillstudio_window {
+  a {
+    color: darken($treehillstudio-color, 10);
+    text-decoration: none;
+    &:hover {
+      color: darken($treehillstudio-color, 25);
+    }
   }
 }
