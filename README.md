@@ -10,23 +10,13 @@ MODX Package Management
 
 ## Usage
 
-Fill the MODX system setting `logrequest.trigger` with a request parameter key
-(or a komma separated list of keys) that should be logged. Install the widget(s)
-in the dashboard to view the logged key values.
+Install via package manager. Populate the MODX system setting
+`logrequest.trigger` and install the dashboard widgets.
 
-## System Settings
+## Documentation
 
-LogRequest uses the following system settings in the namespace `logrequest`:
+For more information please read the [documentation](https://jako.github.io/LogRequest/).
 
-Key | Description | Default
-----|-------------|--------
-logrequest.trigger | Request key that triggers the request logging. |
+## License
 
-## Widgets
-
-LogRequest contains two dashboard widgets to display the logged data:
-
-Widget | Description
-----|-------------
-LogRequest Rank | This widget displays the request ranks
-LogRequest Log | This widget displays the logged requests
+The project is licensed under the [GPLv2 license](https://github.com/Jako/LogRequest/blob/master/core/components/logrequest/docs/license.md).
