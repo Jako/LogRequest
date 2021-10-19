@@ -159,7 +159,7 @@ module.exports = function (grunt) {
                     }]
                 }
             },
-            homepanel: {
+            widgets: {
                 files: [{
                     src: 'source/js/mgr/widgets/log.grid.js',
                     dest: 'source/js/mgr/widgets/log.grid.js'
@@ -171,6 +171,18 @@ module.exports = function (grunt) {
                     replacements: [{
                         pattern: /© \d{4}(-\d{4})? by/g,
                         replacement: '© ' + (new Date().getFullYear() > 2016 ? '2016-' : '') + new Date().getFullYear() + ' by'
+                    }]
+                }
+            },
+            docs: {
+                files: [{
+                    src: 'mkdocs.yml',
+                    dest: 'mkdocs.yml'
+                }],
+                options: {
+                    replacements: [{
+                        pattern: /&copy; \d{4}(-\d{4})?/g,
+                        replacement: '&copy; ' + (new Date().getFullYear() > 2016 ? '2016-' : '') + new Date().getFullYear()
                     }]
                 }
             }

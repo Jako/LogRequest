@@ -113,8 +113,8 @@ if ($object->xpdo) {
                 "LogRequestLog"
             );
 
-            $modelPath = $modx->getOption('cronmanager.core_path', null, $modx->getOption('core_path') . 'components/cronmanager/') . 'model/';
-            $modx->addPackage('cronmanager', $modelPath);
+            $modelPath = $modx->getOption('logrequest.core_path', null, $modx->getOption('core_path') . 'components/logrequest/') . 'model/';
+            $modx->addPackage('logrequest', $modelPath);
 
             foreach ($tables as $table) {
                 $modx->log(modX::LOG_LEVEL_INFO, 'Altering table: ' . $table);
