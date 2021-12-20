@@ -21,7 +21,7 @@ This widget displays the logged requests by rank
 
 ## System Settings
 
-The following MODX system settings are available:
+LogRequest uses the following system settings in the namespace `logrequest`:
 
 Key | Description | Default
 ----|-------------|--------
