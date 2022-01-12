@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model package="logrequest" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB">
+<model package="logrequest" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="logrequest" phpdoc-subpackage="model" version="1.1">
     <object class="LogRequestLog" table="logrequest_log" extends="xPDOSimpleObject">
         <field key="trigger" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
         <field key="value" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>

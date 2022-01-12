@@ -6,9 +6,11 @@
  * @subpackage widget
  */
 
-require_once(dirname(__FILE__) . '/logrequest.widget.php');
+require_once dirname(__DIR__, 2) . '/vendor/autoload.php';
 
-class modDashboardWidgetLogrequestRank extends modDashboardWidgetLogrequest
+use TreehillStudio\LogRequest\Widgets\Widget;
+
+class RankWidget extends Widget
 {
     public $cssBlockClass = 'dashboard-block-treehillstudio" id="dashboard-block-treehillstudio-rank';
 
@@ -21,4 +23,4 @@ class modDashboardWidgetLogrequestRank extends modDashboardWidgetLogrequest
     }
 }
 
-return 'modDashboardWidgetLogrequestRank';
+return 'RankWidget';

@@ -3,7 +3,7 @@
   "lowCaseName": "logrequest",
   "description": "Log request parameter values and display them in the Dashboard",
   "author": "Thomas Jakobi",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "package": {
     "elements": {
       "widgets": [
@@ -55,7 +55,7 @@
   "dependencies": [
     {
       "name": "php",
-      "version": ">=5.6"
+      "version": ">=7.2"
     },
     {
       "name": "modx",

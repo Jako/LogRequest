@@ -7,12 +7,16 @@ $xpdo_meta_map['LogRequestLog']= array (
   'version' => '1.1',
   'table' => 'logrequest_log',
   'extends' => 'xPDOSimpleObject',
+  'tableMeta' => 
+  array (
+    'engine' => 'InnoDB',
+  ),
   'fields' => 
   array (
     'trigger' => '',
     'value' => '',
     'request' => NULL,
-    'loggedon' => NULL,
+    'loggedon' => 0,
   ),
   'fieldMeta' => 
   array (
@@ -43,7 +47,9 @@ $xpdo_meta_map['LogRequestLog']= array (
       'dbtype' => 'int',
       'precision' => '10',
       'phptype' => 'integer',
-      'null' => true,
+      'attributes' => 'unsigned',
+      'null' => false,
+      'default' => 0,
     ),
   ),
 );

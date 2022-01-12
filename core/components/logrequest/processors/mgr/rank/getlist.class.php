@@ -1,15 +1,16 @@
 <?php
-
 /**
  * Get Rank
  *
  * @package logrequest
  * @subpackage processors
  */
-class LogrequestRankGetProcessor extends modProcessor
+
+use TreehillStudio\LogRequest\Processors\ObjectGetListProcessor;
+
+class LogrequestRankGetProcessor extends ObjectGetListProcessor
 {
     public $classKey = 'LogRequestLog';
-    public $languageTopics = array('logrequest:default');
     public $defaultSortField = 'count';
     public $defaultSortDirection = 'DESC';
     public $objectType = 'logrequest.log';
@@ -45,7 +46,7 @@ class LogrequestRankGetProcessor extends modProcessor
 
     public function prepareRow(xPDOObject $object)
     {
-        $ta = $object->toArray('', false, false);
+        $ta = $object->toArray();
         $ta['value'] = htmlspecialchars($ta['value']);
         return $ta;
     }

@@ -1,0 +1,37 @@
+.dashboard {
+  .modx3 {
+    .x-grid3, .x-panel-bbar {
+      table {
+        width: initial;
+        border: initial;
+        border-radius: initial;
+        td {
+          white-space: initial;
+          border-bottom: initial;
+          padding: initial;
+        }
+      }
+    }
+  }
+}
+
+.dashboard {
+  table {
+    width: initial;
+    border: initial;
+    border-radius: initial;
+    td {
+      white-space: initial;
+      border-bottom: initial;
+      padding: initial;
+    }
+  }
+}
+
+
+.treehillstudio-widget-about {
+  &.modx3 {
+    right: 50%;
+    transform: translateX(+50%);
+  }
+}

@@ -7,7 +7,7 @@ SimpleSearch form in the dashboard.
 ### Requirements
 
 * MODX Revolution 2.6+
-* PHP v5.6+
+* PHP 7.2+
 
 ### Features
 
