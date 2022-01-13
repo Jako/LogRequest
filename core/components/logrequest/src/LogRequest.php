@@ -91,7 +91,7 @@ class LogRequest
         $this->options = array_merge($this->options, [
             'debug' => (bool)$this->getOption('debug', $options, false),
             'modxversion' => $modxversion['version'],
-            'trigger' => $this->getOption('trigger', $config),
+            'trigger' => $this->getOption('trigger', $options),
         ]);
 
         $this->modx->addPackage($this->namespace, $this->getOption('modelPath'));
