@@ -39,8 +39,8 @@ MODx.grid.Logrequest = function (config) {
     MODx.grid.Logrequest.superclass.constructor.call(this, config);
 };
 Ext.extend(MODx.grid.Logrequest, MODx.grid.Grid, {
-    // Workaround to resize the grid when in a dashboard widget
-    onAfterRender: function (component, b, c) {
+    onAfterRender: function () {
+        // Workaround to resize the grid when in a dashboard widget
         var cnt = Ext.getCmp('modx-content');
         var target = Ext.get('modx-grid-logrequest-' + this.config.type);
 
