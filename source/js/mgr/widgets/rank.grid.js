@@ -1,12 +1,12 @@
 /**
  * Loads a grid with the log request ranks.
  *
- * @class MODx.grid.LogrequestRank
- * @extends MODx.grid.Grid
+ * @class LogRequest.grid.LogrequestRank
+ * @extends LogRequest.grid.Logrequest
  * @param {Object} config An object of options.
  * @xtype modx-grid-logrequest-rank
  */
-MODx.grid.LogrequestRank = function (config) {
+LogRequest.grid.LogrequestRank = function (config) {
     config = config || {};
     Ext.applyIf(config, {
         fields: ['value', 'count'],
@@ -21,7 +21,7 @@ MODx.grid.LogrequestRank = function (config) {
         }],
         type: 'rank'
     });
-    MODx.grid.LogrequestRank.superclass.constructor.call(this, config);
+    LogRequest.grid.LogrequestRank.superclass.constructor.call(this, config);
 };
-Ext.extend(MODx.grid.LogrequestRank, MODx.grid.Logrequest, {});
-Ext.reg('modx-grid-logrequest-rank', MODx.grid.LogrequestRank);
+Ext.extend(LogRequest.grid.LogrequestRank, LogRequest.grid.Logrequest, {});
+Ext.reg('logrequest-grid-logrequest-rank', LogRequest.grid.LogrequestRank);

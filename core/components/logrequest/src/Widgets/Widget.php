@@ -77,6 +77,7 @@ abstract class Widget extends modDashboardWidgetInterface
 
         if ($this->logrequest->getOption('debug') && ($this->logrequest->getOption('assetsUrl') != MODX_ASSETS_URL . 'components/logrequest/')) {
             $this->controller->addJavascript($jsSourceUrl . 'logrequest.js');
+            $this->controller->addJavascript($jsSourceUrl . 'helper/util.js');
             $this->controller->addJavascript($jsSourceUrl . 'widgets/logrequest.grid.js');
             $this->controller->addJavascript($jsSourceUrl . 'widgets/' . $type . '.grid.js');
             $this->controller->addCss($cssSourceUrl . 'logrequest.css');
@@ -88,8 +89,8 @@ abstract class Widget extends modDashboardWidgetInterface
         Ext.onReady(function() {
             LogRequest.config = ' . json_encode($this->logrequest->options, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . ';
             MODx.load({
-                xtype: "modx-grid-logrequest-' . $type . '",
-                renderTo: "modx-grid-logrequest-' . $type . '",
+                xtype: "logrequest-grid-logrequest-' . $type . '",
+                renderTo: "logrequest-grid-logrequest-' . $type . '",
                 connector_url: LogRequest.config.connectorUrl
             });
         });

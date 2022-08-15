@@ -1,1 +1,1 @@
-<div id="modx-grid-logrequest-log"></div>
+<div id="logrequest-grid-logrequest-log"></div>

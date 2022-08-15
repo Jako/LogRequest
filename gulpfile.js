@@ -34,9 +34,10 @@ pkg.dependencies.forEach(function (dependency, index) {
     }
 });
 
-gulp.task('scripts-mgr', function () {
+const scriptsMgr = function () {
     return gulp.src([
         'source/js/mgr/logrequest.js',
+        'source/js/mgr/helper/util.js',
         'source/js/mgr/widgets/logrequest.grid.js',
         'source/js/mgr/widgets/rank.grid.js',
         'source/js/mgr/widgets/log.grid.js'
@@ -45,9 +46,10 @@ gulp.task('scripts-mgr', function () {
         .pipe(uglify())
         .pipe(header(banner + '\n', {pkg: pkg}))
         .pipe(gulp.dest('assets/components/logrequest/js/mgr/'))
-});
+};
+gulp.task('scripts', gulp.series(scriptsMgr));
 
-gulp.task('sass-mgr', function () {
+const sassMgr = function () {
     return gulp.src([
         'source/sass/mgr/logrequest.scss'
     ])
@@ -71,29 +73,31 @@ gulp.task('sass-mgr', function () {
         }))
         .pipe(footer('\n' + banner, {pkg: pkg}))
         .pipe(gulp.dest('assets/components/logrequest/css/mgr/'))
-});
+};
+gulp.task('sass', gulp.series(sassMgr));
 
-gulp.task('images-mgr', function () {
+const imagesMgr = function () {
     return gulp.src('./source/img/**/*.+(png|jpg|gif|svg)')
         .pipe(gulp.dest('assets/components/logrequest/img/'));
-});
+};
+gulp.task('images', gulp.series(imagesMgr));
 
-gulp.task('bump-copyright', function () {
+const bumpCopyright = function () {
     return gulp.src([
         'core/components/logrequest/model/logrequest/logrequest.class.php',
         'core/components/logrequest/src/LogRequest.php',
     ], {base: './'})
         .pipe(replace(/Copyright 2016(-\d{4})? by/g, 'Copyright ' + (year > 2016 ? '2016-' : '') + year + ' by'))
         .pipe(gulp.dest('.'));
-});
-gulp.task('bump-version', function () {
+};
+const bumpVersion = function () {
     return gulp.src([
         'core/components/logrequest/src/LogRequest.php',
     ], {base: './'})
         .pipe(replace(/version = '\d+.\d+.\d+[-a-z0-9]*'/ig, 'version = \'' + pkg.version + '\''))
         .pipe(gulp.dest('.'));
-});
-gulp.task('bump-widget', function () {
+};
+const bumpWidget = function () {
     return gulp.src([
         'source/js/mgr/widgets/logrequest.grid.js',
         'source/js/mgr/widgets/log.grid.js',
@@ -101,32 +105,32 @@ gulp.task('bump-widget', function () {
     ], {base: './'})
         .pipe(replace(/&copy; 2016(-\d{4})?/g, '&copy; ' + (year > 2016 ? '2016-' : '') + year))
         .pipe(gulp.dest('.'));
-});
-gulp.task('bump-docs', function () {
+};
+const bumpDocs = function () {
     return gulp.src([
         'mkdocs.yml',
     ], {base: './'})
         .pipe(replace(/&copy; 2016(-\d{4})?/g, '&copy; ' + (year > 2016 ? '2016-' : '') + year))
         .pipe(gulp.dest('.'));
-});
-gulp.task('bump-requirements', function () {
+};
+const bumpRequirements = function () {
     return gulp.src([
         'docs/index.md',
     ], {base: './'})
         .pipe(replace(/[*-] MODX Revolution \d.\d.*/g, '* MODX Revolution ' + modxversion + '+'))
         .pipe(replace(/[*-] PHP (v)?\d.\d.*/g, '* PHP ' + phpversion + '+'))
         .pipe(gulp.dest('.'));
-});
-gulp.task('bump', gulp.series('bump-copyright', 'bump-version', 'bump-widget', 'bump-docs', 'bump-requirements'));
+};
+gulp.task('bump', gulp.series(bumpCopyright, bumpVersion, bumpWidget, bumpDocs, bumpRequirements));
 
 gulp.task('watch', function () {
     // Watch .js files
-    gulp.watch(['./source/js/**/*.js'], gulp.series('scripts-mgr'));
+    gulp.watch(['./source/js/**/*.js'], gulp.series(scriptsMgr));
     // Watch .scss files
-    gulp.watch(['./source/sass/**/*.scss'], gulp.series('sass-mgr'));
+    gulp.watch(['./source/sass/**/*.scss'], gulp.series(sassMgr));
     // Watch *.(png|jpg|gif|svg) files
-    gulp.watch(['./source/img/**/*.(png|jpg|gif|svg)'], gulp.series('images-mgr'));
+    gulp.watch(['./source/img/**/*.(png|jpg|gif|svg)'], gulp.series(imagesMgr));
 });
 
 // Default Task
-gulp.task('default', gulp.series('bump', 'scripts-mgr', 'sass-mgr', 'images-mgr'));
+gulp.task('default', gulp.series('bump', scriptsMgr, sassMgr, imagesMgr));

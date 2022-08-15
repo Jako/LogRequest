@@ -1,12 +1,12 @@
 /**
  * Loads a grid with the log requests.
  *
- * @class MODx.grid.Logrequest
+ * @class LogRequest.grid.Logrequest
  * @extends MODx.grid.Grid
  * @param {Object} config An object of options.
  * @xtype modx-grid-logrequest-log
  */
-MODx.grid.Logrequest = function (config) {
+LogRequest.grid.Logrequest = function (config) {
     config = config || {};
     Ext.applyIf(config, {
         id: 'logrequest-grid-' + config.type,
@@ -24,7 +24,7 @@ MODx.grid.Logrequest = function (config) {
         }, {
             header: _('logrequest.widget.date'),
             dataIndex: 'loggedon',
-            renderer: Ext.util.Format.dateRenderer(MODx.config.manager_date_format + ' ' + MODx.config.manager_time_format),
+            renderer: LogRequest.util.dateRenderer(MODx.config.manager_date_format + ' ' + MODx.config.manager_time_format),
             width: 100
         }],
         paging: true,
@@ -36,9 +36,9 @@ MODx.grid.Logrequest = function (config) {
         },
         type: 'log'
     });
-    MODx.grid.Logrequest.superclass.constructor.call(this, config);
+    LogRequest.grid.Logrequest.superclass.constructor.call(this, config);
 };
-Ext.extend(MODx.grid.Logrequest, MODx.grid.Grid, {
+Ext.extend(LogRequest.grid.Logrequest, MODx.grid.Grid, {
     onAfterRender: function () {
         // Workaround to resize the grid when in a dashboard widget
         var cnt = Ext.getCmp('modx-content');
@@ -75,4 +75,4 @@ Ext.extend(MODx.grid.Logrequest, MODx.grid.Grid, {
         })
     }
 });
-Ext.reg('modx-grid-logrequest', MODx.grid.Logrequest);
+Ext.reg('logrequest-grid-logrequest', LogRequest.grid.Logrequest);
