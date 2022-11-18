@@ -19,7 +19,7 @@ class LogrequestRankGetProcessor extends ObjectGetListProcessor
     {
         $c = $this->modx->newQuery($this->classKey);
         $c->select($this->modx->getSelectColumns($this->classKey, $this->classKey, '', ['value']));
-        $c->select('COUNT(*) AS count');
+        $c->select(['count' => 'COUNT(*)']);
         $c->groupby($this->classKey . '.value');
         $c->sortby($this->getProperty('sort', $this->defaultSortField), $this->getProperty('sort_dir', $this->defaultSortDirection));
 
