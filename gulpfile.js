@@ -94,7 +94,7 @@ const bumpVersion = function () {
     return gulp.src([
         'core/components/logrequest/src/LogRequest.php',
     ], {base: './'})
-        .pipe(replace(/version = '\d+.\d+.\d+[-a-z0-9]*'/ig, 'version = \'' + pkg.version + '\''))
+        .pipe(replace(/version = '\d+\.\d+\.\d+[-a-z0-9]*'/ig, 'version = \'' + pkg.version + '\''))
         .pipe(gulp.dest('.'));
 };
 const bumpWidget = function () {
