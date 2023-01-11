@@ -4,7 +4,7 @@
  * @class LogRequest.grid.Logrequest
  * @extends MODx.grid.Grid
  * @param {Object} config An object of options.
- * @xtype modx-grid-logrequest-log
+ * @xtype logrequest-grid-logrequest
  */
 LogRequest.grid.Logrequest = function (config) {
     config = config || {};
@@ -42,7 +42,7 @@ Ext.extend(LogRequest.grid.Logrequest, MODx.grid.Grid, {
     onAfterRender: function () {
         // Workaround to resize the grid when in a dashboard widget
         var cnt = Ext.getCmp('modx-content');
-        var target = Ext.get('modx-grid-logrequest-' + this.config.type);
+        var target = Ext.get('logrequest-grid-logrequest-' + this.config.type);
 
         if (cnt && target) {
             cnt.on('afterlayout', function () {
@@ -64,7 +64,7 @@ Ext.extend(LogRequest.grid.Logrequest, MODx.grid.Grid, {
         var about = widget.select('.treehillstudio-widget-about');
         about.on('click', function () {
             var msg = '<span style="display: inline-block; text-align: center"><img src="' + LogRequest.config.assetsUrl + 'img/mgr/treehill-studio.png" srcset="' + LogRequest.config.assetsUrl + 'img/mgr/treehill-studio@2x.png 2x" alt="Treehill Studio"><br>' +
-                '&copy; 2016-2022 by <a href="https://treehillstudio.com" target="_blank">treehillstudio.com</a></span>';
+                '&copy; 2016-2023 by <a href="https://treehillstudio.com" target="_blank">treehillstudio.com</a></span>';
             Ext.Msg.show({
                 title: _('logrequest') + ' ' + LogRequest.config.version,
                 msg: msg,

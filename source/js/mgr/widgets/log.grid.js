@@ -4,7 +4,7 @@
  * @class LogRequest.grid.LogrequestLog
  * @extends LogRequest.grid.Logrequest
  * @param {Object} config An object of options.
- * @xtype modx-grid-logrequest-log
+ * @xtype logrequest-grid-logrequest-log
  */
 LogRequest.grid.LogrequestLog = function (config) {
     config = config || {};

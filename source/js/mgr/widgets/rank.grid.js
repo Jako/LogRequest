@@ -4,7 +4,7 @@
  * @class LogRequest.grid.LogrequestRank
  * @extends LogRequest.grid.Logrequest
  * @param {Object} config An object of options.
- * @xtype modx-grid-logrequest-rank
+ * @xtype logrequest-grid-logrequest-rank
  */
 LogRequest.grid.LogrequestRank = function (config) {
     config = config || {};

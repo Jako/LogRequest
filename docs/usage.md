@@ -23,6 +23,6 @@ This widget displays the logged requests by rank
 
 LogRequest uses the following system settings in the namespace `logrequest`:
 
-Key | Description | Default
-----|-------------|--------
-Request Trigger | Request key that triggers the request logging. | -
+| Key             | Description                                    | Default |
+|-----------------|------------------------------------------------|---------|
+| Request Trigger | Request key that triggers the request logging. | -       |

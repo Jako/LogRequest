@@ -1,6 +1,6 @@
 .modx-grid-small .x-grid3-cell-inner{padding:8px 5px}.modx-grid-small .x-grid3-hd-inner{padding:8px 18px 8px 5px}.modx-grid-small .x-grid3-td-checker{padding:6px 0 0}.modx-grid-small .x-grid3-td-checker.x-grid3-hd{padding-top:0}.modx-grid-small .x-panel-tbar .x-toolbar{padding-top:2px}.modx-grid-small .x-panel-tbar .x-toolbar.x-small-editor .x-form-text{padding:3px 8px 2px}.modx-grid-small .x-panel-tbar .x-toolbar .x-btn{padding:4px 10px}.modx-grid-small .x-panel-bbar .x-toolbar .x-btn{padding:2px}.modx-grid-small .x-panel-bbar .x-toolbar .x-form-text{padding:2px 3px}.modx-grid-small .x-tbar-loading:before{line-height:16px}.modx-grid-small .x-tbar-page-first:before,.modx-grid-small .x-tbar-page-last:before,.modx-grid-small .x-tbar-page-next:before,.modx-grid-small .x-tbar-page-prev:before{line-height:16px}.modx-grid-small .x-btn-icon.arrow_down button:before,.modx-grid-small .x-btn-icon.arrow_up button:before,.modx-grid-small .x-btn-icon.refresh button:before{line-height:16px}.x-form-display-field{height:20px;line-height:20px;padding:6px}.dashboard-block-treehillstudio{position:relative}.treehillstudio-widget-about{cursor:pointer;opacity:.25;position:absolute;right:15px;top:12px;transition:opacity .5s}.treehillstudio-widget-about:hover{opacity:1}.treehillstudio_window a{color:#b2bf28;text-decoration:none}.treehillstudio_window a:hover{color:#77801a}.treehillstudio-widget-about.modx3{right:50%;transform:translateX(50%)}
 /*!
  * LogRequest - Log request parameter values and display them in the Dashboard
- * Version: 1.1.1
- * Build date: 2022-08-18
+ * Version: 1.1.2
+ * Build date: 2023-01-11
  */

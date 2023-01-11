@@ -2,7 +2,7 @@
 /**
  * LogRequest
  *
- * Copyright 2016-2022 by Thomas Jakobi <office@treehillstudio.com>
+ * Copyright 2016-2023 by Thomas Jakobi <office@treehillstudio.com>
  *
  * @package logrequest
  * @subpackage classfile
@@ -41,7 +41,7 @@ class LogRequest
      * The version
      * @var string $version
      */
-    public $version = '1.1.1';
+    public $version = '1.1.2';
 
     /**
      * The class options
