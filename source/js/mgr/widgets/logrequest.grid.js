@@ -8,8 +8,9 @@
  */
 LogRequest.grid.Logrequest = function (config) {
     config = config || {};
+    this.ident = 'delicart-orders-' + config.type + '-' + Ext.id();
     Ext.applyIf(config, {
-        id: 'logrequest-grid-' + config.type,
+        id: this.ident,
         url: config.connector_url,
         baseParams: {
             action: 'mgr/' + config.type + '/getlist'
