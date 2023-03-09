@@ -2,7 +2,7 @@
 /**
  * LogRequest
  *
- * Copyright 2016-2023 by Thomas Jakobi <office@treehillstudio.com>
+ * Copyright 2016-2022 by Thomas Jakobi <office@treehillstudio.com>
  *
  * @package logrequest
  * @subpackage classfile
@@ -10,7 +10,6 @@
 
 namespace TreehillStudio\LogRequest;
 
-use modResource;
 use modX;
 use Term;
 
@@ -41,7 +40,7 @@ class LogRequest
      * The version
      * @var string $version
      */
-    public $version = '1.1.2';
+    public $version = '1.1.1';
 
     /**
      * The class options
@@ -87,17 +86,19 @@ class LogRequest
             'connectorUrl' => $assetsUrl . 'connector.php'
         ], $options);
 
+        $lexicon = $this->modx->getService('lexicon', 'modLexicon');
+        $lexicon->load($this->namespace . ':default');
+
+        $this->packageName = $this->modx->lexicon('logrequest');
+
+        $this->modx->addPackage($this->namespace, $this->getOption('modelPath'));
+
         // Add default options
         $this->options = array_merge($this->options, [
             'debug' => (bool)$this->getOption('debug', $options, false),
             'modxversion' => $modxversion['version'],
             'trigger' => $this->getOption('trigger', $options),
         ]);
-
-        $this->modx->addPackage($this->namespace, $this->getOption('modelPath'));
-
-        $lexicon = $this->modx->getService('lexicon', 'modLexicon');
-        $lexicon->load($this->namespace . ':default');
     }
 
     /**
