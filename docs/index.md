@@ -13,3 +13,11 @@ SimpleSearch form in the dashboard.
 
 * Dashboard widgets to display logged request parameter values
 * Display the request ranks and the logged requests by date/time
+
+### License
+
+The project is licensed under the [GPLv2 license](https://github.com/Jako/TwoFactorX/LICENSE.md).
+
+### Translations [![Default Lexicon](https://hosted.weblate.org/widget/modx-extras/twofactorx/standard/svg-badge.svg)](https://hosted.weblate.org/projects/modx-extras/twofactorx/)
+
+Translations of the package can be made for the [Default Lexicon](https://hosted.weblate.org/projects/modx-extras/twofactorx/standard/), the [Email Lexicon](https://hosted.weblate.org/projects/modx-extras/twofactorx/email/), the [Properties Lexicon](https://hosted.weblate.org/projects/modx-extras/twofactorx/properties/), the [Permissions Lexicon](https://hosted.weblate.org/projects/modx-extras/twofactorx/permissions/) and the [System Setting Lexicon](https://hosted.weblate.org/projects/modx-extras/twofactorx/system-settings/)

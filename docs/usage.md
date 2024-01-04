@@ -11,13 +11,13 @@ LogRequest contains two dashboard widgets to display the logged data:
 
 This widget displays the logged requests by date/time
 
-[![](img/logrequest-log.jpg)](img/logrequest-log.jpg)
+![LogRequest Log Widget](img/logrequest-log.jpg)
 
 ### LogRequest Rank
 
 This widget displays the logged requests by rank
 
-[![](img/logrequest-rank.jpg)](img/logrequest-rank.jpg)
+![LogRequest Rank Widget](img/logrequest-rank.jpg)
 
 ## System Settings
 

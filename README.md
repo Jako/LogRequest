@@ -20,3 +20,7 @@ For more information please read the [documentation](https://jako.github.io/LogR
 ## License
 
 The project is licensed under the [GPLv2 license](https://github.com/Jako/LogRequest/blob/master/core/components/logrequest/docs/license.md).
+
+### Translations
+
+Translations of the package can be made for the [Default Lexicon](https://hosted.weblate.org/projects/modx-extras/logrequest/standard/) and the [System Setting Lexicon](https://hosted.weblate.org/projects/modx-extras/logrequest/system-settings/)
