@@ -8,9 +8,9 @@
 
 namespace TreehillStudio\LogRequest\Processors;
 
-use TreehillStudio\LogRequest\LogRequest;
 use modObjectGetListProcessor;
 use modX;
+use TreehillStudio\LogRequest\LogRequest;
 use xPDOQuery;
 
 /**
