@@ -17,7 +17,7 @@ LogRequest.grid.LogrequestLog = function (config) {
         }, {
             header: _('logrequest.widget.date'),
             dataIndex: 'loggedon',
-            renderer: LogRequest.util.dateRenderer(MODx.config.manager_date_format + ' ' + MODx.config.manager_time_format),
+            renderer: LogRequest.util.dateRenderer(),
             width: 100
         }],
         type: 'log'
