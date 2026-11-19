@@ -87,7 +87,7 @@ abstract class Widget extends modDashboardWidgetInterface
         }
         $this->modx->controller->addHtml('<script type="text/javascript">
         Ext.onReady(function() {
-            LogRequest.config = ' . json_encode($this->logrequest->options, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . ';
+            LogRequest.config = ' . json_encode($this->logrequest->getManagerOptions(), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . ';
             MODx.load({
                 xtype: "logrequest-grid-logrequest-' . $type . '",
                 renderTo: "logrequest-grid-logrequest-' . $type . '",
